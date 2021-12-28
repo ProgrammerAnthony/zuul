@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
 /**
  * Represents the context between client and origin server for the duration of the dedicated connection/session
  * between them. But we're currently still only modelling single request/response pair per session.
- *
+ * 非线程安全的客户端服务端通信context
  * NOTE: Not threadsafe, and not intended to be used concurrently.
  *
  * User: Mike Smith
