@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author mhawthorne
+ * 单例对象管理filter信息在ConcurrentHashMap里
  */
 public class FilterRegistry {
 

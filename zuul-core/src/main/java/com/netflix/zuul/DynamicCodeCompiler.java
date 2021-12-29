@@ -24,6 +24,7 @@ import java.io.File;
  * User: mcohen
  * Date: 5/30/13
  * Time: 11:35 AM
+ * 利用源码生成代码，主要用于Groovy生成filter
  */
 public interface DynamicCodeCompiler {
     Class compile(String sCode, String sName) throws Exception;

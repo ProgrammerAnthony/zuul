@@ -136,7 +136,7 @@ public class FilterLoader {
     /**
      * From a file this will read the ZuulFilter source code, compile it, and add it to the list of current filters
      * a true response means that it was successful.
-     *
+     * 从文件中添加filter，通过{@link DynamicCodeCompiler}编译，添加到内存{@link FilterRegistry} 保存对应
      * @param file
      * @return true if the filter in file successfully read, compiled, verified and added to Zuul
      * @throws IllegalAccessException
@@ -274,6 +274,7 @@ public class FilterLoader {
         @Test
         public void testGetFilterFromString() throws Exception {
             String string = "";
+            //doReturn 直接返回TestZuulFilter，值得学习的Mockito
             doReturn(TestZuulFilter.class).when(compiler).compile(string, string);
             ZuulFilter filter = loader.getFilter(string, string);
 

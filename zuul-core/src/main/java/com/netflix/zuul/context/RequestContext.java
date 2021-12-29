@@ -49,7 +49,7 @@ import com.netflix.zuul.util.DeepCopy;
  * The RequestContext lives for the duration of the request and is ThreadLocal.
  * extensions of RequestContext can be substituted by setting the contextClass.
  * Most methods here are convenience wrapper methods; the RequestContext is an extension of a ConcurrentHashMap
- *
+ * RequestContext请求上下文封装了对应的请求和响应，以及当前状态信息和zuulFilter需要的数据，继承自ConcurrentHashMap
  * @author Mikey Cohen
  *         Date: 10/13/11
  *         Time: 10:21 AM

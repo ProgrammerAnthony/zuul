@@ -48,7 +48,7 @@ import static org.mockito.Mockito.when;
  * safely and repeatedly with the same results.
  * <p/>
  * This class is intended to wrap relatively small HttpServletRequest instances.
- *
+ * 装饰者模式处理{@link HttpServletRequestWrapper},在{@link com.netflix.zuul.ZuulRunner}中处理
  * @author pgurov
  */
 public class HttpServletRequestWrapper extends javax.servlet.http.HttpServletRequestWrapper {

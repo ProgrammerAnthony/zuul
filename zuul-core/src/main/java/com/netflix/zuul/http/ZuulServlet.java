@@ -28,6 +28,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,7 +41,7 @@ import static org.mockito.Mockito.*;
 
 /**
  * Core Zuul servlet which intializes and orchestrates zuulFilter execution
- *
+ * zuul核心处理流程，在1.x里是通过继承HttpServlet，装饰者模式封装了重写的请求（{@link #service(ServletRequest, ServletResponse)} }）实现
  * @author Mikey Cohen
  *         Date: 12/23/11
  *         Time: 10:44 AM
@@ -69,7 +71,7 @@ public class ZuulServlet extends HttpServlet {
             // explicitly bound in web.xml, for which requests will not have the same data attached
             RequestContext context = RequestContext.getCurrentContext();
             context.setZuulEngineRan();
-
+            //拦截请求封装
             try {
                 preRoute();
             } catch (ZuulException e) {

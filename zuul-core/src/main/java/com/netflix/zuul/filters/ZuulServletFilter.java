@@ -42,7 +42,7 @@ import static org.mockito.Mockito.*;
  * then routing filters, then post routing filters. Handled exceptions in pre-routing and routing
  * call the error filters, then call post-routing filters. Errors in post-routing only invoke the error filters.
  * Unhandled exceptions only invoke the error filters
- *
+ * 在servlet filter中运行对应的zuul，封装了pre，route，post和error过滤
  * @author Mikey Cohen
  *         Date: 10/12/11
  *         Time: 2:54 PM

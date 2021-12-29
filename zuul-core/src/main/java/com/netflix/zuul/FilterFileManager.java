@@ -39,7 +39,7 @@ import static org.mockito.Mockito.*;
  * This class manages the directory polling for changes and new Groovy filters.
  * Polling interval and directories are specified in the initialization of the class, and a poller will check
  * for changes and additions.
- *
+ * 单例对象，5秒一次加载对应的groovy filter
  * @author Mikey Cohen
  *         Date: 12/7/11
  *         Time: 12:09 PM

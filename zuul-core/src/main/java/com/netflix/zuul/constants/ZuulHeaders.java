@@ -22,6 +22,7 @@ package com.netflix.zuul.constants;
  * User: mcohen
  * Date: 5/15/13
  * Time: 4:38 PM
+ * zuul添加或者处理的请求头
  */
 public class ZuulHeaders {
     public static final String TRANSFER_ENCODING = "transfer-encoding";

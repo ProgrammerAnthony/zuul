@@ -150,6 +150,7 @@ public class FilterProcessor {
             Debug.addRoutingDebug("Invoking {" + sType + "} type filters");
         }
         boolean bResult = false;
+        //获取filter类型，pre，route，post等
         List<ZuulFilter> list = FilterLoader.getInstance().getFiltersByType(sType);
         if (list != null) {
             for (int i = 0; i < list.size(); i++) {
@@ -165,7 +166,7 @@ public class FilterProcessor {
 
     /**
      * Processes an individual ZuulFilter. This method adds Debug information. Any uncaught Thowables are caught by this method and converted to a ZuulException with a 500 status code.
-     *
+     * 执行filter逻辑，实际调用runfilter
      * @param filter
      * @return the return value for that filter
      * @throws ZuulException
